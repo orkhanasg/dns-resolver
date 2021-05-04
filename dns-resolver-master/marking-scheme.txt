@@ -1,0 +1,187 @@
+Total before late penalty: [25/67]
+
+
+Manually graded:
+
+(5/5) code style/documentation
+(7/5) other
+- 2 points returned for quit-debug
+
+Automatically graded:
+
+(0/2) Use of CRLF
+
+Debugging output enabled
+csdict> open localhost 8888
+8888
+220 Socket[addr=localhost/127.0.0.1,port=8888,localport=53964]
+csdict> define crlf
+901 Incorrect number of arguments.
+csdict> 
+
+(0/3) set dictionary, define a word
+
+csdict> open test.dict.org 2628
+2628
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=59978]
+csdict> set wn
+901 Incorrect number of arguments.
+csdict> define plutonium
+901 Incorrect number of arguments.
+csdict> 
+
+(3/3) no prefixmatch in '*'
+(0/3) no definition in '*', no match with default strategy
+
+csdict> open test.dict.org 2628
+2628
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=59970]
+csdict> define qwertyuiop
+901 Incorrect number of arguments.
+csdict> 
+
+(2/2) 997 Invalid command line option - Only -d is allowed
+(0/2) 925 Control connection I/O error, closing control connection (timeout)
+
+csdict> open localhost 8888
+8888
+220 Socket[addr=localhost/127.0.0.1,port=8888,localport=53966]
+csdict> define timeout
+
+(0/2) 925 Control connection I/O error, closing control connection (server closed connection)
+
+csdict> open localhost 8888
+8888
+220 Socket[addr=localhost/127.0.0.1,port=8888,localport=53974]
+csdict> define close
+901 Incorrect number of arguments.
+csdict> 
+
+(0/2) close with debug on
+
+Debugging output enabled
+csdict> open test.dict.org 2628
+2628
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=59980]
+csdict> close
+csdict> 
+
+(0/2) define with debug on
+
+Debugging output enabled
+csdict> open test.dict.org 2628
+2628
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=59992]
+csdict> 
+
+(2/2) 901 Incorrect number of arguments
+(0/2) quit with debug on
+
+Debugging output enabled
+csdict> open test.dict.org 2628
+2628
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=60000]
+csdict> quit
+csdict> 
+
+(0/3) prefixmatch in '*'
+
+csdict> open test.dict.org 2628
+2628
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=59994]
+csdict> prefixmatch jabber
+152 14 matches found
+gcide "Jabber"/n
+gcide "Jabbered"/n
+gcide "Jabberer"/n
+gcide "Jabbering"/n
+gcide "Jabberingly"/n
+gcide "Jabberment"/n
+gcide "Jabbernowl"/n
+wn "jabber"/n
+wn "jabberer"/n
+wn "jabbering"/n
+wn "jabberwocky"/n
+moby-thesaurus "jabber"/n
+moby-thesaurus "jabberer"/n
+foldoc "jabber"/n
+csdict> 
+
+(0/3) no definition in '*', match with default strategy
+
+csdict> open test.dict.org 2628
+2628
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=60002]
+csdict> define orcas
+901 Incorrect number of arguments.
+csdict> 
+
+(0/2) 999 Processing error. Timed out while waiting for a response. (920 also accepted)
+
+csdict> open google.com 80
+80
+
+(0/3) match in '*'
+
+csdict> open test.dict.org 2628
+2628
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=59986]
+csdict> match apple
+901 Incorrect number of arguments.
+csdict> 
+
+(0/2) 900 Invalid command
+
+csdict> potato
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at CSdict.main(CSdict.java:83)
+
+(2/2) 920 Control connection to xxx on port yyy failed to open. (999 also accepted)
+(0/3) no match in '*'
+
+csdict> open test.dict.org 2628
+2628
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=60006]
+csdict> match abcdef
+901 Incorrect number of arguments.
+csdict> 
+
+(0/2) 902 Invalid argument
+
+csdict> open test.dict.org port
+port
+902 Invalid Argument
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=59996]
+csdict> 
+
+(2/2) 996 Too many command line options - Only -d is allowed
+(0/3) set dict, prefixmatch
+
+csdict> open test.dict.org 2628
+2628
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=60008]
+csdict> set vera
+901 Incorrect number of arguments.
+csdict> prefixmatch rf
+901 Incorrect number of arguments.
+csdict> 
+
+(0/2) '#' and blank line yield new prompt
+
+csdict> #
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at CSdict.main(CSdict.java:83)
+
+(2/2) 903 Supplied command not expected at this time
+(0/3) set dict, match
+
+csdict> open test.dict.org 2628
+2628
+220 Socket[addr=test.dict.org/216.18.20.172,port=2628,localport=60004]
+csdict> set moby-thesaurus
+csdict> match monolith
+152 3 matches found
+gcide "Monolith"/n
+wn "monolith"/n
+moby-thesaurus "monolith"/n
+csdict> 

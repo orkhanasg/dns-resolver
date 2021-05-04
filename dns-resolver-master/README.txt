@@ -1,0 +1,1 @@
+I have one slight problemthat, in order to quit() you first need to close(). Also "900 error invalid command" was not implemented. For both problems, I tried to include that functionality, but each time other bugs were emerging.
